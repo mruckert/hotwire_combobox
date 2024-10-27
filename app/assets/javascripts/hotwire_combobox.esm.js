@@ -662,6 +662,7 @@ Combobox.Filtering = Base => class extends Base {
       q: this._fullQuery,
       input_type: inputType,
       for_id: this.element.dataset.asyncId,
+      value_id: this.element.dataset.value,
       callback_id: this._enqueueCallback()
     };
 
