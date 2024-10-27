@@ -1073,6 +1073,9 @@ Combobox.Options = Base => class extends Base {
 
 Combobox.Selection = Base => class extends Base {
   selectOnClick({ currentTarget, inputType }) {
+
+    console.log(currentTarget.dataset.value);
+
     this._forceSelectionAndFilter(currentTarget, inputType);
     this._closeAndBlur("hw:optionRoleClick");
   }
