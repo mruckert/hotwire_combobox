@@ -662,7 +662,7 @@ Combobox.Filtering = Base => class extends Base {
       q: this._fullQuery,
       input_type: inputType,
       for_id: this.element.dataset.asyncId,
-      value_id: this.element.dataset.value,
+      value_id: this.selected_id,
       callback_id: this._enqueueCallback()
     };
 
@@ -1074,7 +1074,7 @@ Combobox.Options = Base => class extends Base {
 Combobox.Selection = Base => class extends Base {
   selectOnClick({ currentTarget, inputType }) {
 
-    console.log(currentTarget.dataset.value);
+    this.selected_id = currentTarget.dataset.value;
 
     this._forceSelectionAndFilter(currentTarget, inputType);
     this._closeAndBlur("hw:optionRoleClick");
